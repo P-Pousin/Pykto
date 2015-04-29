@@ -1,0 +1,14 @@
+  // direction up, down, left, right, up-left, up-right, down-left, down-right
+
+Triangle(direction,size,color,background-color=transparent)
+    width 0
+    height 0
+    border size solid background-color
+    if direction == up || direction == down-left || direction == down-right
+        border-bottom-color color
+    if direction == down || direction == up-left || direction == up-right
+        border-top-color color
+    if direction == left || direction == down-right || direction == up-right
+        border-right-color color
+    if direction == right || direction == down-left || direction == up-left
+        border-left-color color
