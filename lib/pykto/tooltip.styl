@@ -1,0 +1,48 @@
+Tooltip(color, background-color, width, radius, fontSize)
+  .tooltip-container
+    cursor pointer
+    position relative
+    display inline-block
+
+  .tooltip
+    opacity 0
+    z-index 99
+    color color
+    width width
+    height auto
+    display block
+    font-size fontSize
+    padding 5px 10px
+    border-radius radius
+    text-align center
+    background-color background-color
+    -webkit-transition all .2s ease-in-out
+    -moz-transition all .2s ease-in-out
+    -o-transition all .2s ease-in-out
+    -ms-transition all .2s ease-in-out
+    transition all .2s ease-in-out
+    -webkit-transform scale(0)
+    -moz-transform scale(0)
+    -o-transform scale(0)
+    -ms-transform scale(0)
+    transform scale(0)
+    position absolute
+    right -80px
+    bottom 40px
+
+  .tooltip:before,.tooltip:after
+    content ''
+    border-left 10px solid transparent
+    border-right 10px solid transparent
+    border-top 10px solid background-color
+    position absolute
+    bottom -10px
+    left 43%
+
+  .tooltip-container:hover .tooltip,a:hover .tooltip
+    opacity 1
+    -webkit-transform scale(1)
+    -moz-transform scale(1)
+    -o-transform scale(1)
+    -ms-transform scale(1)
+    transform scale(1)
