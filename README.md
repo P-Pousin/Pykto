@@ -148,3 +148,23 @@ Pour préfixer une animation
 Animation(name,time,type)
 ```
 
+##Tooltip
+
+Pour mettre un tooltip sur un élément
+
+déclaration HTML
+
+```html
+<div class="element-container">
+  <div class="tooltip-container">
+    <span>Element</span>
+    <span class="tooltip">Tooltip content</span>
+  </div>
+</div>
+```
+
+```stylus
+.element-container
+  Tooltip(color, background-color, width, radius, fontSize)
+```
+
